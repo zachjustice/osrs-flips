@@ -122,6 +122,40 @@ code {
   text-align: right;
 }
 
+.table-tools {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  gap: 1.25rem;
+}
+
+.filter-control {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.filter-control select {
+  min-width: 9rem;
+  padding: 0.55rem 2rem 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: #f3ead7;
+  background: var(--paper);
+  font: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.filter-control select:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 2px;
+}
+
 .table-scroll {
   overflow-x: auto;
 }
@@ -248,6 +282,13 @@ footer a {
 
   .method {
     text-align: left;
+  }
+
+  .table-tools {
+    width: 100%;
+    align-items: start;
+    flex-direction: column;
+    gap: 0.8rem;
   }
 
   th,

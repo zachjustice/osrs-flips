@@ -1,7 +1,9 @@
 const rows = document.querySelector("#flip-rows");
 const updated = document.querySelector("#last-updated");
 const method = document.querySelector("#method");
+const membershipFilter = document.querySelector("#membership-filter");
 const number = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+let items = [];
 
 function cell(value, className = "") {
   const td = document.createElement("td");
@@ -19,6 +21,51 @@ function showError(message) {
   rows.append(tr);
   updated.textContent = "Unavailable";
 }
+
+function matchesMembership(item) {
+  if (membershipFilter.value === "members") {
+    return item.members;
+  }
+  if (membershipFilter.value === "free") {
+    return !item.members;
+  }
+  return true;
+}
+
+function renderRows() {
+  rows.replaceChildren();
+  const visibleItems = items.filter(matchesMembership);
+
+  for (const item of visibleItems) {
+    const tr = document.createElement("tr");
+    const nameCell = document.createElement("td");
+    const link = document.createElement("a");
+    link.href = item.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = item.name;
+    nameCell.append(link);
+
+    tr.append(
+      nameCell,
+      cell(number.format(item.recommended_buy), "numeric price"),
+      cell(number.format(item.recommended_sell), "numeric price"),
+      cell(`${number.format(item.estimated_profit_per_hour)} gp`, "numeric profit"),
+      cell(`${number.format(item.max_profit)} gp`, "numeric profit"),
+    );
+    rows.append(tr);
+  }
+
+  if (visibleItems.length === 0) {
+    const tr = document.createElement("tr");
+    const td = cell("No recommendations match this filter.", "status");
+    td.colSpan = 5;
+    tr.append(td);
+    rows.append(tr);
+  }
+}
+
+membershipFilter.addEventListener("change", renderRows);
 
 try {
   const response = await fetch("data/flips.json", { cache: "no-store" });
@@ -49,30 +96,8 @@ try {
   method.textContent =
     "Estimated profit includes expected fills and time. Max profit assumes the full buy limit fills and sells.";
 
-  rows.replaceChildren();
-  for (const item of data.items) {
-    const tr = document.createElement("tr");
-    const nameCell = document.createElement("td");
-    const link = document.createElement("a");
-    link.href = item.url;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = item.name;
-    nameCell.append(link);
-
-    tr.append(
-      nameCell,
-      cell(number.format(item.recommended_buy), "numeric price"),
-      cell(number.format(item.recommended_sell), "numeric price"),
-      cell(`${number.format(item.estimated_profit_per_hour)} gp`, "numeric profit"),
-      cell(`${number.format(item.max_profit)} gp`, "numeric profit"),
-    );
-    rows.append(tr);
-  }
-
-  if (data.items.length === 0) {
-    showError("No items passed the model filters in the latest run.");
-  }
+  items = data.items;
+  renderRows();
 } catch (error) {
   console.error(error);
   showError("The latest shortlist could not be loaded. Please try again later.");
