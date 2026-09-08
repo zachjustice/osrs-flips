@@ -14,7 +14,7 @@ function showError(message) {
   rows.replaceChildren();
   const tr = document.createElement("tr");
   const td = cell(message, "status error");
-  td.colSpan = 4;
+  td.colSpan = 5;
   tr.append(td);
   rows.append(tr);
   updated.textContent = "Unavailable";
@@ -46,7 +46,8 @@ try {
     timeZoneName: "short",
   });
   updated.title = timestamp.toISOString();
-  method.textContent = "After-tax margin × buy limit ÷ 4 hours";
+  method.textContent =
+    "Estimated profit includes expected fills and time. Max profit assumes the full buy limit fills and sells.";
 
   rows.replaceChildren();
   for (const item of data.items) {
@@ -63,7 +64,8 @@ try {
       nameCell,
       cell(number.format(item.recommended_buy), "numeric price"),
       cell(number.format(item.recommended_sell), "numeric price"),
-      cell(`${number.format(item.gold_per_hour_at_limit)} gp`, "numeric profit"),
+      cell(`${number.format(item.estimated_profit_per_hour)} gp`, "numeric profit"),
+      cell(`${number.format(item.max_profit)} gp`, "numeric profit"),
     );
     rows.append(tr);
   }
