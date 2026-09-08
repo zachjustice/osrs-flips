@@ -1,19 +1,29 @@
 {
-  "updated_at": "2026-09-08T18:00:54.286Z",
+  "updated_at": "2026-09-08T18:03:28.623Z",
   "horizon_minutes": 240,
   "buy_window_hours": 2,
   "sell_window_hours": 2,
   "calculation": "estimated profit/hour uses model expected profit ÷ expected slot time; max profit is after-tax unit margin × GE buy limit",
   "items": [
     {
-      "id": 27616,
-      "name": "Ancient essence",
-      "url": "https://prices.runescape.wiki/osrs/item/27616",
-      "recommended_buy": 18,
-      "recommended_sell": 19,
-      "buy_limit": 300000,
-      "estimated_profit_per_hour": 39245,
-      "max_profit": 300000
+      "id": 25413,
+      "name": "Bloodbark helm",
+      "url": "https://prices.runescape.wiki/osrs/item/25413",
+      "recommended_buy": 99031,
+      "recommended_sell": 138888,
+      "buy_limit": 100,
+      "estimated_profit_per_hour": 20941,
+      "max_profit": 3708000
+    },
+    {
+      "id": 33074,
+      "name": "Facility bottle (empty)",
+      "url": "https://prices.runescape.wiki/osrs/item/33074",
+      "recommended_buy": 33692,
+      "recommended_sell": 48072,
+      "buy_limit": 100,
+      "estimated_profit_per_hour": 17574,
+      "max_profit": 1341900
     },
     {
       "id": 554,
@@ -22,28 +32,8 @@
       "recommended_buy": 5,
       "recommended_sell": 6,
       "buy_limit": 50000,
-      "estimated_profit_per_hour": 16644,
+      "estimated_profit_per_hour": 16654,
       "max_profit": 50000
-    },
-    {
-      "id": 557,
-      "name": "Earth rune",
-      "url": "https://prices.runescape.wiki/osrs/item/557",
-      "recommended_buy": 5,
-      "recommended_sell": 6,
-      "buy_limit": 50000,
-      "estimated_profit_per_hour": 11741,
-      "max_profit": 50000
-    },
-    {
-      "id": 31111,
-      "name": "Demon tear",
-      "url": "https://prices.runescape.wiki/osrs/item/31111",
-      "recommended_buy": 234,
-      "recommended_sell": 241,
-      "buy_limit": 13000,
-      "estimated_profit_per_hour": 11718,
-      "max_profit": 39000
     },
     {
       "id": 556,
@@ -52,48 +42,8 @@
       "recommended_buy": 5,
       "recommended_sell": 6,
       "buy_limit": 50000,
-      "estimated_profit_per_hour": 11577,
+      "estimated_profit_per_hour": 11584,
       "max_profit": 50000
-    },
-    {
-      "id": 892,
-      "name": "Rune arrow",
-      "url": "https://prices.runescape.wiki/osrs/item/892",
-      "recommended_buy": 42,
-      "recommended_sell": 45,
-      "buy_limit": 11000,
-      "estimated_profit_per_hour": 10916,
-      "max_profit": 33000
-    },
-    {
-      "id": 555,
-      "name": "Water rune",
-      "url": "https://prices.runescape.wiki/osrs/item/555",
-      "recommended_buy": 5,
-      "recommended_sell": 6,
-      "buy_limit": 50000,
-      "estimated_profit_per_hour": 10627,
-      "max_profit": 50000
-    },
-    {
-      "id": 810,
-      "name": "Adamant dart",
-      "url": "https://prices.runescape.wiki/osrs/item/810",
-      "recommended_buy": 30,
-      "recommended_sell": 35,
-      "buy_limit": 11000,
-      "estimated_profit_per_hour": 10497,
-      "max_profit": 55000
-    },
-    {
-      "id": 6332,
-      "name": "Mahogany logs",
-      "url": "https://prices.runescape.wiki/osrs/item/6332",
-      "recommended_buy": 101,
-      "recommended_sell": 109,
-      "buy_limit": 11000,
-      "estimated_profit_per_hour": 10310,
-      "max_profit": 66000
     },
     {
       "id": 34033,
@@ -106,16 +56,6 @@
       "max_profit": 185200
     },
     {
-      "id": 19580,
-      "name": "Rune javelin tips",
-      "url": "https://prices.runescape.wiki/osrs/item/19580",
-      "recommended_buy": 369,
-      "recommended_sell": 381,
-      "buy_limit": 10000,
-      "estimated_profit_per_hour": 10020,
-      "max_profit": 50000
-    },
-    {
       "id": 19930,
       "name": "Armadyl d'hide boots",
       "url": "https://prices.runescape.wiki/osrs/item/19930",
@@ -126,6 +66,26 @@
       "max_profit": 310472
     },
     {
+      "id": 1517,
+      "name": "Maple logs",
+      "url": "https://prices.runescape.wiki/osrs/item/1517",
+      "recommended_buy": 11,
+      "recommended_sell": 12,
+      "buy_limit": 15000,
+      "estimated_profit_per_hour": 7960,
+      "max_profit": 15000
+    },
+    {
+      "id": 251,
+      "name": "Marrentill",
+      "url": "https://prices.runescape.wiki/osrs/item/251",
+      "recommended_buy": 401,
+      "recommended_sell": 493,
+      "buy_limit": 13000,
+      "estimated_profit_per_hour": 7506,
+      "max_profit": 1079000
+    },
+    {
       "id": 28991,
       "name": "Atlatl dart",
       "url": "https://prices.runescape.wiki/osrs/item/28991",
@@ -134,6 +94,16 @@
       "buy_limit": 11000,
       "estimated_profit_per_hour": 6724,
       "max_profit": 33000
+    },
+    {
+      "id": 24953,
+      "name": "Waterbirth teleport (tablet)",
+      "url": "https://prices.runescape.wiki/osrs/item/24953",
+      "recommended_buy": 1565,
+      "recommended_sell": 1750,
+      "buy_limit": 10000,
+      "estimated_profit_per_hour": 6573,
+      "max_profit": 1500000
     },
     {
       "id": 21483,
@@ -204,6 +174,36 @@
       "buy_limit": 70,
       "estimated_profit_per_hour": 5010,
       "max_profit": 459130
+    },
+    {
+      "id": 22557,
+      "name": "Amulet of avarice",
+      "url": "https://prices.runescape.wiki/osrs/item/22557",
+      "recommended_buy": 403279,
+      "recommended_sell": 421087,
+      "buy_limit": 8,
+      "estimated_profit_per_hour": 4267,
+      "max_profit": 75096
+    },
+    {
+      "id": 21948,
+      "name": "Dragonstone dragon bolts (e)",
+      "url": "https://prices.runescape.wiki/osrs/item/21948",
+      "recommended_buy": 3114,
+      "recommended_sell": 3475,
+      "buy_limit": 11000,
+      "estimated_profit_per_hour": 4123,
+      "max_profit": 3212000
+    },
+    {
+      "id": 2114,
+      "name": "Pineapple",
+      "url": "https://prices.runescape.wiki/osrs/item/2114",
+      "recommended_buy": 166,
+      "recommended_sell": 182,
+      "buy_limit": 13000,
+      "estimated_profit_per_hour": 3905,
+      "max_profit": 169000
     }
   ]
 }
