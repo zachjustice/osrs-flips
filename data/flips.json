@@ -1,0 +1,189 @@
+{
+  "updated_at": "2026-09-08T17:18:40.184Z",
+  "horizon_minutes": 240,
+  "buy_window_hours": 2,
+  "sell_window_hours": 2,
+  "calculation": "after-tax unit margin × GE buy limit ÷ 4 hours",
+  "items": [
+    {
+      "id": 21948,
+      "name": "Dragonstone dragon bolts (e)",
+      "url": "https://prices.runescape.wiki/osrs/item/21948",
+      "recommended_buy": 3114,
+      "recommended_sell": 3697,
+      "buy_limit": 11000,
+      "gold_per_hour_at_limit": 1402500
+    },
+    {
+      "id": 6568,
+      "name": "Obsidian cape",
+      "url": "https://prices.runescape.wiki/osrs/item/6568",
+      "recommended_buy": 435541,
+      "recommended_sell": 451122,
+      "buy_limit": 70,
+      "gold_per_hour_at_limit": 114783
+    },
+    {
+      "id": 25404,
+      "name": "Bloodbark body",
+      "url": "https://prices.runescape.wiki/osrs/item/25404",
+      "recommended_buy": 207724,
+      "recommended_sell": 216709,
+      "buy_limit": 70,
+      "gold_per_hour_at_limit": 81393
+    },
+    {
+      "id": 27616,
+      "name": "Ancient essence",
+      "url": "https://prices.runescape.wiki/osrs/item/27616",
+      "recommended_buy": 18,
+      "recommended_sell": 19,
+      "buy_limit": 300000,
+      "gold_per_hour_at_limit": 75000
+    },
+    {
+      "id": 19930,
+      "name": "Armadyl d'hide boots",
+      "url": "https://prices.runescape.wiki/osrs/item/19930",
+      "recommended_buy": 211555,
+      "recommended_sell": 247619,
+      "buy_limit": 8,
+      "gold_per_hour_at_limit": 62224
+    },
+    {
+      "id": 34033,
+      "name": "Ardeaglais teleport",
+      "url": "https://prices.runescape.wiki/osrs/item/34033",
+      "recommended_buy": 30430,
+      "recommended_sell": 32940,
+      "buy_limit": 100,
+      "gold_per_hour_at_limit": 46300
+    },
+    {
+      "id": 21483,
+      "name": "Ultracompost",
+      "url": "https://prices.runescape.wiki/osrs/item/21483",
+      "recommended_buy": 535,
+      "recommended_sell": 596,
+      "buy_limit": 2000,
+      "gold_per_hour_at_limit": 25000
+    },
+    {
+      "id": 10828,
+      "name": "Helm of Neitiznot",
+      "url": "https://prices.runescape.wiki/osrs/item/10828",
+      "recommended_buy": 46425,
+      "recommended_sell": 48751,
+      "buy_limit": 70,
+      "gold_per_hour_at_limit": 23643
+    },
+    {
+      "id": 19580,
+      "name": "Rune javelin tips",
+      "url": "https://prices.runescape.wiki/osrs/item/19580",
+      "recommended_buy": 365,
+      "recommended_sell": 381,
+      "buy_limit": 10000,
+      "gold_per_hour_at_limit": 22500
+    },
+    {
+      "id": 13249,
+      "name": "Key master teleport",
+      "url": "https://prices.runescape.wiki/osrs/item/13249",
+      "recommended_buy": 24225,
+      "recommended_sell": 25464,
+      "buy_limit": 100,
+      "gold_per_hour_at_limit": 18250
+    },
+    {
+      "id": 556,
+      "name": "Air rune",
+      "url": "https://prices.runescape.wiki/osrs/item/556",
+      "recommended_buy": 5,
+      "recommended_sell": 6,
+      "buy_limit": 50000,
+      "gold_per_hour_at_limit": 12500
+    },
+    {
+      "id": 557,
+      "name": "Earth rune",
+      "url": "https://prices.runescape.wiki/osrs/item/557",
+      "recommended_buy": 5,
+      "recommended_sell": 6,
+      "buy_limit": 50000,
+      "gold_per_hour_at_limit": 12500
+    },
+    {
+      "id": 554,
+      "name": "Fire rune",
+      "url": "https://prices.runescape.wiki/osrs/item/554",
+      "recommended_buy": 5,
+      "recommended_sell": 6,
+      "buy_limit": 50000,
+      "gold_per_hour_at_limit": 12500
+    },
+    {
+      "id": 555,
+      "name": "Water rune",
+      "url": "https://prices.runescape.wiki/osrs/item/555",
+      "recommended_buy": 5,
+      "recommended_sell": 6,
+      "buy_limit": 50000,
+      "gold_per_hour_at_limit": 12500
+    },
+    {
+      "id": 28991,
+      "name": "Atlatl dart",
+      "url": "https://prices.runescape.wiki/osrs/item/28991",
+      "recommended_buy": 101,
+      "recommended_sell": 107,
+      "buy_limit": 11000,
+      "gold_per_hour_at_limit": 11000
+    },
+    {
+      "id": 31111,
+      "name": "Demon tear",
+      "url": "https://prices.runescape.wiki/osrs/item/31111",
+      "recommended_buy": 234,
+      "recommended_sell": 241,
+      "buy_limit": 13000,
+      "gold_per_hour_at_limit": 9750
+    },
+    {
+      "id": 6332,
+      "name": "Mahogany logs",
+      "url": "https://prices.runescape.wiki/osrs/item/6332",
+      "recommended_buy": 100,
+      "recommended_sell": 105,
+      "buy_limit": 11000,
+      "gold_per_hour_at_limit": 8250
+    },
+    {
+      "id": 892,
+      "name": "Rune arrow",
+      "url": "https://prices.runescape.wiki/osrs/item/892",
+      "recommended_buy": 42,
+      "recommended_sell": 45,
+      "buy_limit": 11000,
+      "gold_per_hour_at_limit": 8250
+    },
+    {
+      "id": 810,
+      "name": "Adamant dart",
+      "url": "https://prices.runescape.wiki/osrs/item/810",
+      "recommended_buy": 30,
+      "recommended_sell": 32,
+      "buy_limit": 11000,
+      "gold_per_hour_at_limit": 5500
+    },
+    {
+      "id": 558,
+      "name": "Mind rune",
+      "url": "https://prices.runescape.wiki/osrs/item/558",
+      "recommended_buy": 3,
+      "recommended_sell": 4,
+      "buy_limit": 18000,
+      "gold_per_hour_at_limit": 4500
+    }
+  ]
+}

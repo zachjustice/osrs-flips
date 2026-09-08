@@ -1,0 +1,269 @@
+:root {
+  color-scheme: dark;
+  font-family: "DM Mono", monospace;
+  color: #f3ead7;
+  background: #171510;
+  font-synthesis: none;
+  --paper: #211e17;
+  --paper-raised: #29251b;
+  --line: #4a4232;
+  --muted: #ada38f;
+  --gold: #e2b85b;
+  --gold-bright: #f6cf77;
+  --green: #8fd197;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(226, 184, 91, 0.1), transparent 32rem),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    #171510;
+  background-size: auto, 100% 4px, auto;
+}
+
+main,
+footer {
+  width: min(1100px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+main {
+  padding: clamp(3rem, 8vw, 7rem) 0 3rem;
+}
+
+.hero {
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Newsreader", serif;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  max-width: 700px;
+  font-size: clamp(3rem, 8vw, 6.4rem);
+  line-height: 0.9;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.intro {
+  max-width: 660px;
+  margin: 1.5rem 0 0;
+  color: #d4c9b4;
+  font-family: "Newsreader", serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  line-height: 1.5;
+}
+
+code {
+  color: var(--gold-bright);
+  font-family: inherit;
+  font-size: 0.85em;
+}
+
+.updated {
+  margin: 1.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.table-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.table-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 1.6rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-raised);
+}
+
+.table-heading .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.method {
+  max-width: 340px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  padding: 1rem 1.6rem;
+  border-bottom: 1px solid rgba(74, 66, 50, 0.72);
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+td {
+  font-size: 0.86rem;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+tbody tr {
+  transition: background 140ms ease;
+}
+
+tbody tr:hover {
+  background: rgba(226, 184, 91, 0.055);
+}
+
+.numeric {
+  text-align: right;
+}
+
+.price {
+  color: #ddd2bd;
+}
+
+.profit {
+  color: var(--green);
+  font-weight: 500;
+}
+
+a {
+  color: var(--gold-bright);
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(246, 207, 119, 0.42);
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+.status {
+  padding-block: 2.2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.error {
+  color: #e5a49c;
+}
+
+.disclaimer {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.25fr) 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.4rem 1.6rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(226, 184, 91, 0.06);
+}
+
+.disclaimer .eyebrow,
+.disclaimer p {
+  margin: 0;
+}
+
+.disclaimer p:last-child {
+  color: #c8bda9;
+  font-family: "Newsreader", serif;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 0 0 3rem;
+  color: #817866;
+  font-size: 0.68rem;
+}
+
+footer a {
+  color: #b9ad97;
+}
+
+@media (max-width: 700px) {
+  main,
+  footer {
+    width: min(100% - 1rem, 1100px);
+  }
+
+  .table-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.25rem;
+  }
+
+  .method {
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding-inline: 1.25rem;
+  }
+
+  .disclaimer {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
