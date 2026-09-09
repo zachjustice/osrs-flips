@@ -49,6 +49,11 @@ tbody tr { counter-increment: row; }
 .profit { color: var(--green); font-weight: 500; }
 .status { padding: 2.5rem; color: var(--muted); text-align: center; }
 .error { color: #a33c28; }
+.market-link { margin: 1.35rem 0 0; font-size: .76rem; }
+.market-link a { color: var(--green); font-weight: 700; text-decoration: none; }
+.market-link a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.market-link span { display: inline-block; margin-left: .25rem; transition: transform .12s ease; }
+.market-link a:hover span { transform: translate(2px, -2px); }
 .note { max-width: 650px; margin: 1.3rem 0 2.5rem; color: var(--muted); font-size: .72rem; line-height: 1.6; }
 
 @media (max-width: 620px) {
