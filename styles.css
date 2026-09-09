@@ -16,6 +16,7 @@ body { min-width: 320px; margin: 0; }
 main { width: min(1180px, calc(100% - 3rem)); margin: 0 auto; }
 header { display: flex; justify-content: space-between; align-items: center; min-height: 72px; border-bottom: 1px solid var(--line); }
 .brand { color: var(--ink); font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-decoration: none; text-transform: uppercase; }
+.header-tools { display: flex; align-items: center; gap: 1.4rem; }
 header p { display: flex; align-items: center; gap: .5rem; margin: 0; color: var(--muted); font: .67rem "DM Mono", monospace; }
 header i { width: .45rem; height: .45rem; border-radius: 50%; background: var(--green); }
 
@@ -49,16 +50,17 @@ tbody tr { counter-increment: row; }
 .profit { color: var(--green); font-weight: 500; }
 .status { padding: 2.5rem; color: var(--muted); text-align: center; }
 .error { color: #a33c28; }
-.market-link { margin: 1.35rem 0 0; font-size: .76rem; }
-.market-link a { color: var(--green); font-weight: 700; text-decoration: none; }
-.market-link a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.market-link { color: var(--green); font-size: .69rem; font-weight: 700; text-decoration: none; }
+.market-link:hover { text-decoration: underline; text-underline-offset: .2em; }
 .market-link span { display: inline-block; margin-left: .25rem; transition: transform .12s ease; }
-.market-link a:hover span { transform: translate(2px, -2px); }
+.market-link:hover span { transform: translate(2px, -2px); }
 .note { max-width: 650px; margin: 1.3rem 0 2.5rem; color: var(--muted); font-size: .72rem; line-height: 1.6; }
 
 @media (max-width: 620px) {
   main { width: calc(100% - 2rem); }
   header { min-height: 60px; }
+  .header-tools { gap: .8rem; }
+  .market-link { font-size: .6rem; }
   header p { font-size: .58rem; }
   .trades { padding-top: 1.6rem; }
   .table-header { align-items: start; flex-direction: column; }
