@@ -1,13 +1,10 @@
 const rows = document.querySelector("#flip-rows");
 const updated = document.querySelector("#last-updated");
 const method = document.querySelector("#method");
-const membershipFilter = document.querySelector("#membership-filter");
-const issueDate = document.querySelector("#issue-date");
-const candidateCount = document.querySelector("#candidate-count");
-const bestHourly = document.querySelector("#best-hourly");
-const membersCount = document.querySelector("#members-count");
+const filterButtons = document.querySelectorAll(".filter-button");
 const number = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
 let items = [];
+let activeFilter = "all";
 
 function cell(value, className = "") {
   const td = document.createElement("td");
@@ -24,17 +21,13 @@ function showError(message) {
   tr.append(td);
   rows.append(tr);
   updated.textContent = "Unavailable";
-  issueDate.textContent = "Unavailable";
-  candidateCount.textContent = "—";
-  bestHourly.textContent = "—";
-  membersCount.textContent = "—";
 }
 
 function matchesMembership(item) {
-  if (membershipFilter.value === "members") {
+  if (activeFilter === "members") {
     return item.members;
   }
-  if (membershipFilter.value === "free") {
+  if (activeFilter === "free") {
     return !item.members;
   }
   return true;
@@ -74,7 +67,17 @@ function renderRows() {
   }
 }
 
-membershipFilter.addEventListener("change", renderRows);
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    activeFilter = button.dataset.filter;
+    filterButtons.forEach((filter) => {
+      const isActive = filter === button;
+      filter.classList.toggle("is-active", isActive);
+      filter.setAttribute("aria-pressed", String(isActive));
+    });
+    renderRows();
+  });
+});
 
 try {
   const response = await fetch("data/flips.json", { cache: "no-store" });
@@ -102,18 +105,10 @@ try {
     timeZoneName: "short",
   });
   updated.title = timestamp.toISOString();
-  issueDate.textContent = timestamp.toLocaleDateString(undefined, {
-    month: "short",
-    day: "2-digit",
-    year: "numeric",
-  });
   method.textContent =
-    "Estimated profit includes expected fills and time. Max profit assumes the full buy limit fills and sells.";
+    "The list ranks items by expected profit each hour.";
 
   items = data.items;
-  candidateCount.textContent = number.format(items.length);
-  bestHourly.textContent = `${number.format(Math.max(...items.map((item) => item.estimated_profit_per_hour)))} gp`;
-  membersCount.textContent = number.format(items.filter((item) => item.members).length);
   renderRows();
 } catch (error) {
   console.error(error);
