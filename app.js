@@ -2,6 +2,10 @@ const rows = document.querySelector("#flip-rows");
 const updated = document.querySelector("#last-updated");
 const method = document.querySelector("#method");
 const membershipFilter = document.querySelector("#membership-filter");
+const issueDate = document.querySelector("#issue-date");
+const candidateCount = document.querySelector("#candidate-count");
+const bestHourly = document.querySelector("#best-hourly");
+const membersCount = document.querySelector("#members-count");
 const number = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
 let items = [];
 
@@ -20,6 +24,10 @@ function showError(message) {
   tr.append(td);
   rows.append(tr);
   updated.textContent = "Unavailable";
+  issueDate.textContent = "Unavailable";
+  candidateCount.textContent = "—";
+  bestHourly.textContent = "—";
+  membersCount.textContent = "—";
 }
 
 function matchesMembership(item) {
@@ -44,6 +52,7 @@ function renderRows() {
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.textContent = item.name;
+    link.className = "item-link";
     nameCell.append(link);
 
     tr.append(
@@ -93,10 +102,18 @@ try {
     timeZoneName: "short",
   });
   updated.title = timestamp.toISOString();
+  issueDate.textContent = timestamp.toLocaleDateString(undefined, {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  });
   method.textContent =
     "Estimated profit includes expected fills and time. Max profit assumes the full buy limit fills and sells.";
 
   items = data.items;
+  candidateCount.textContent = number.format(items.length);
+  bestHourly.textContent = `${number.format(Math.max(...items.map((item) => item.estimated_profit_per_hour)))} gp`;
+  membersCount.textContent = number.format(items.filter((item) => item.members).length);
   renderRows();
 } catch (error) {
   console.error(error);

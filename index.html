@@ -3,86 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Hourly OSRS Grand Exchange flip recommendations."
-    />
-    <title>OSRS Flip Recommendations</title>
+    <meta name="description" content="Actionable Old School RuneScape Grand Exchange flip research." />
+    <title>The Flip Ledger — Grand Exchange research</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IM+Fell+English:ital@0;1&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" type="module"></script>
   </head>
   <body>
     <main>
-      <header class="hero">
-        <p class="eyebrow">Grand Exchange research</p>
-        <h1>OSRS flip recommendations</h1>
-        <p class="intro">
-          Ranked opportunities refreshed hourly.
-        </p>
-        <p class="updated">
-          Last updated: <time id="last-updated">Loading…</time>
-        </p>
+      <header class="masthead">
+        <a class="wordmark" href="#top" aria-label="The Flip Ledger home"><span class="wordmark-mark">F</span><span>THE FLIP<br />LEDGER</span></a>
+        <p class="masthead-center">Grand Exchange intelligence / issue <span id="issue-date">—</span></p>
+        <div class="live-stamp"><i></i> Market scan live</div>
       </header>
-
-      <section class="table-card" aria-labelledby="table-title">
-        <div class="table-heading">
-          <div>
-            <p class="eyebrow">Current candidates</p>
-            <h2 id="table-title">Recommended Flips</h2>
-          </div>
-          <div class="table-tools">
-            <label class="filter-control" for="membership-filter">
-              <span>Access</span>
-              <select id="membership-filter">
-                <option value="all">All items</option>
-                <option value="members">Members only</option>
-                <option value="free">Free</option>
-              </select>
-            </label>
-            <p class="method" id="method"></p>
-          </div>
-        </div>
-
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col" class="numeric">Recommended buy</th>
-                <th scope="col" class="numeric">Recommended sell</th>
-                <th scope="col" class="numeric">Estimated profit/hr</th>
-                <th scope="col" class="numeric">Max profit</th>
-              </tr>
-            </thead>
-            <tbody id="flip-rows">
-              <tr>
-                <td class="status" colspan="5">Loading the latest recommendations…</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <section class="lead" id="top" aria-labelledby="page-title">
+        <div class="lead-copy"><p class="kicker">Hourly field notes for patient merchants</p><h1 id="page-title">Grand Exchange<br /><em>flip sheet.</em></h1><p class="deck">A rigorously filtered list of offers worth placing now. Read the margin, mind the limit, and leave room for the unexpected.</p></div>
+        <aside class="scan-note" aria-label="Latest data update"><p class="note-label">Latest market reading</p><time id="last-updated">Loading…</time><p>Prices sampled from the OSRS Wiki real-time feed. The list refreshes on the hour.</p></aside>
       </section>
-
-      <aside class="disclaimer" aria-label="Trading disclaimer">
-        <p class="eyebrow">Trade carefully</p>
-        <p>
-          This is automated research, not a guarantee of profit. Prices and fill
-          conditions can change quickly. Double-check every trade in game and on
-          the linked price chart before placing an offer. You may lose money.
-        </p>
-      </aside>
+      <section class="market-strip" aria-label="Market summary">
+        <div><span id="candidate-count">—</span><small>ranked offers</small></div><div><span id="best-hourly">—</span><small>best gp / hour</small></div><div><span id="members-count">—</span><small>members picks</small></div><p id="method">Reading the market…</p>
+      </section>
+      <section class="ledger" aria-labelledby="table-title">
+        <div class="ledger-topline"><div><p class="kicker">The shortlist</p><h2 id="table-title">Offers on the board</h2></div><label class="filter-control" for="membership-filter"><span>Show inventory</span><select id="membership-filter"><option value="all">All offers</option><option value="members">Members only</option><option value="free">Free-to-play</option></select></label></div>
+        <div class="table-scroll"><table><thead><tr><th scope="col">Pick</th><th scope="col" class="numeric">Buy at</th><th scope="col" class="numeric">Sell at</th><th scope="col" class="numeric">Expected / hr</th><th scope="col" class="numeric">Limit upside</th></tr></thead><tbody id="flip-rows"><tr><td class="status" colspan="5">Opening the ledger…</td></tr></tbody></table></div>
+      </section>
+      <aside class="disclaimer" aria-label="Trading disclaimer"><span class="warning-mark">!</span><div><p class="kicker">Merchant's caution</p><p>These are model-led opportunities, not promises. Prices, fills, and margins can move before an offer lands. Check every trade in-game and on its price chart; losses are possible.</p></div></aside>
     </main>
-
-    <footer>
-      <a href="https://github.com/zachjustice/osrs-flips">View this data repository</a>
-      <span aria-hidden="true">·</span>
-      <span>Data from the OSRS Wiki real-time prices API</span>
-    </footer>
+    <footer><p>Compiled for the Gielinor trading floor.</p><a href="https://github.com/zachjustice/osrs-flips">Inspect the research</a><span>Data: OSRS Wiki real-time prices API</span></footer>
   </body>
 </html>
