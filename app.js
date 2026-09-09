@@ -106,7 +106,7 @@ try {
   });
   updated.title = timestamp.toISOString();
   method.textContent =
-    "The list ranks items by expected profit each hour.";
+    "The list ranks items by expected profit each hour. Item names are links to the Runescape Wiki.";
 
   items = data.items;
   renderRows();
