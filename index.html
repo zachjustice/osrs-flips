@@ -1,46 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Grand Exchange trade recommendations for Old School RuneScape." />
-    <title>Flip Ledger</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" type="module"></script>
-  </head>
-  <body>
-    <main>
-      <header>
-        <a class="brand" href="#trades">Flip Ledger</a>
-        <div class="header-tools">
-          <a class="market-link" href="https://secure.runescape.com/m=itemdb_oldschool/top100?list=0k&amp;scale=0" target="_blank" rel="noopener noreferrer">Market Movers <span aria-hidden="true">↗</span></a>
-          <p><i></i> Live prices <time id="last-updated">Loading...</time></p>
-        </div>
-      </header>
 
-      <section class="trades" id="trades" aria-labelledby="table-title">
-        <div class="table-header">
-          <div>
-            <h1 id="table-title">Trade recommendations</h1>
-            <p id="method">Loading trade data...</p>
-          </div>
-          <div class="filter-control" role="group" aria-label="Item access filter">
-            <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">All</button>
-            <button type="button" class="filter-button" data-filter="free" aria-pressed="false">F2P</button>
-            <button type="button" class="filter-button" data-filter="members" aria-pressed="false">Members</button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grand Exchange trade recommendations for Old School RuneScape." />
+  <title>Flip Ledger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" type="module"></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <a class="brand" href="#trades">Flip Ledger</a>
+      <div class="header-tools">
+        <a class="market-link" href="https://secure.runescape.com/m=itemdb_oldschool/top100?list=0k&amp;scale=0"
+          target="_blank" rel="noopener noreferrer">Market Movers from the Official GE Website <span
+            aria-hidden="true">↗</span></a>
+        <p><i></i> Live prices <time id="last-updated">Loading...</time></p>
+      </div>
+    </header>
+
+    <section class="trades" id="trades" aria-labelledby="table-title">
+      <div class="table-header">
+        <div>
+          <h1 id="table-title">Trade recommendations</h1>
+          <p id="method">Loading trade data...</p>
         </div>
-        <div class="table-scroll">
-          <table>
-            <thead><tr><th scope="col">Item</th><th scope="col" class="numeric">Buy</th><th scope="col" class="numeric">Sell</th><th scope="col" class="numeric">Profit / hour</th><th scope="col" class="numeric">Buy limit profit</th></tr></thead>
-            <tbody id="flip-rows"><tr><td class="status" colspan="5">Loading trades...</td></tr></tbody>
-          </table>
+        <div class="filter-control" role="group" aria-label="Item access filter">
+          <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-button" data-filter="free" aria-pressed="false">F2P</button>
+          <button type="button" class="filter-button" data-filter="members" aria-pressed="false">Members</button>
         </div>
-      </section>
-      <p class="note">Check the price chart before you trade. A listed price does not promise a fill.</p>
-    </main>
-  </body>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col" class="numeric">Buy</th>
+              <th scope="col" class="numeric">Sell</th>
+              <th scope="col" class="numeric">Profit / hour</th>
+              <th scope="col" class="numeric">Buy limit profit</th>
+            </tr>
+          </thead>
+          <tbody id="flip-rows">
+            <tr>
+              <td class="status" colspan="5">Loading trades...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <p class="note">Check the price chart before you trade. A listed price does not promise a fill.</p>
+  </main>
+</body>
+
 </html>
